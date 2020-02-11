@@ -1,0 +1,37 @@
+<div>
+  <div class="buttons-containers">
+
+
+    <button mat-icon-button
+            *ngFor="let iconButton of iconButtons"
+            [color]="iconButton.color"
+            type="button"
+            (click)="unlockButton(iconButton)"
+    >
+      <mat-icon *ngIf="iconButton.status">
+        lock_open
+      </mat-icon>
+
+      <mat-icon *ngIf="!iconButton.status">
+        lock
+      </mat-icon>
+    </button>
+
+  </div>
+
+  <div class="show-content">
+    <mat-icon *ngIf="lockerIsUnlocked"
+              color="warn"
+    >
+      lock_open
+    </mat-icon>
+
+    <mat-icon *ngIf="!lockerIsUnlocked"
+              color="warn"
+    >
+      lock
+    </mat-icon>
+
+  </div>
+
+</div>
