@@ -62,7 +62,7 @@ export class CombineLatestComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    this.titleService.setTitle('ForkJoin');
+    this.titleService.setTitle('Debounce Time');
   }
 
   public unlockButton(iconButon: { color: string, status: boolean, subject: Subject<boolean> }): void {

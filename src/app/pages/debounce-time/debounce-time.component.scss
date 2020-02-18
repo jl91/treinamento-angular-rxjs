@@ -1,0 +1,28 @@
+div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .buttons-containers {
+    border: solid 1px lightgray;
+    display: flex;
+    justify-content: space-between;
+    width: 25% !important;
+    padding: 25px;
+  }
+
+
+  .show-content {
+    margin: {
+      top: 50px;
+      bottom: 50px;
+    };
+    width: 100%;
+
+    mat-icon {
+      font-size: 50px;
+    }
+  }
+
+}

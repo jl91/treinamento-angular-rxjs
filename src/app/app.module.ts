@@ -40,13 +40,16 @@ import {
   MatTooltipModule
 } from '@angular/material';
 import {CombineLatestComponent} from './pages/combine latest/combine-latest.component';
+import {DebounceTimeComponent} from './pages/debounce-time/debounce-time.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ForkJoinComponent,
-    CombineLatestComponent
+    CombineLatestComponent,
+    DebounceTimeComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -83,7 +86,8 @@ import {CombineLatestComponent} from './pages/combine latest/combine-latest.comp
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

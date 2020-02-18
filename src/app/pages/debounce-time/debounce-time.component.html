@@ -1,0 +1,25 @@
+<h3>
+  Debounce Time
+</h3>
+<div>
+  <div class="buttons-containers">
+
+    {{ printText | json }}
+
+
+  </div>
+
+  <div class="show-content">
+    <mat-form-field>
+      <mat-label>
+        text
+      </mat-label>
+      <input matInput
+             [ngModel]="password"
+             (ngModelChange)="onModelChanges($event)"
+      >
+    </mat-form-field>
+
+  </div>
+
+</div>
