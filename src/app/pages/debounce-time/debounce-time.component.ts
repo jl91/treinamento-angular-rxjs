@@ -35,13 +35,12 @@ export class DebounceTimeComponent implements OnInit, AfterViewInit {
       });
   }
 
-
   ngAfterViewInit(): void {
     this.titleService.setTitle('Debounce Time');
   }
 
-
   public onModelChanges(event: string): void {
+    this.password = event;
     this.textObservable.next(event);
   }
 
