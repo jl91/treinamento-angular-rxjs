@@ -39,12 +39,14 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
+import {CombineLatestComponent} from './pages/combine latest/combine-latest.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ForkJoinComponent,
+    CombineLatestComponent
   ],
   imports: [
     BrowserAnimationsModule,
