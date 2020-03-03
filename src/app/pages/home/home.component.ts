@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
   }
 
   public ngOnInit() {
+    this.setSubtitle();
+  }
+
+  public setSubtitle(): void {
     this.subtitle = this.titleService.getTitle();
   }
 
