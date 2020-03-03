@@ -23,8 +23,14 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should test', () => {
-
+  it('should test subtitle', () => {
+    expect(component.subtitle).toEqual('Home');
   });
+
+  it('should test setPageTitleSuffix', () => {
+    component.setPageTitleSuffix();
+    expect(component.subtitle).toEqual('Home Page');
+  });
+
 
 });
