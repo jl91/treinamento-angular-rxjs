@@ -42,14 +42,18 @@ import {
 import {CombineLatestComponent} from './pages/combine latest/combine-latest.component';
 import {DebounceTimeComponent} from './pages/debounce-time/debounce-time.component';
 import {FormsModule} from '@angular/forms';
+import {HomeComponent} from './pages/home/home.component';
+import {TranslatePipe} from './pages/home/pipe/translate.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     ForkJoinComponent,
     CombineLatestComponent,
-    DebounceTimeComponent
+    DebounceTimeComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserAnimationsModule,
