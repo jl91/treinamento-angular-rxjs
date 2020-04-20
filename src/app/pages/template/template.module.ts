@@ -9,6 +9,7 @@ import {ForkJoinComponent} from "../operators/fork-join/fork-join.component";
 import {RouterModule} from "@angular/router";
 import {TemplateComponent} from "./template.component";
 import {FormsModule} from "@angular/forms";
+import {MenuComponent} from "./menu/menu.component";
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import {FormsModule} from "@angular/forms";
     RouterModule,
     FormsModule,
     CoreModule,
-    TemplateRoutingModule
+    TemplateRoutingModule,
   ],
   exports: [
     TemplateRoutingModule
@@ -25,7 +26,8 @@ import {FormsModule} from "@angular/forms";
     TemplateComponent,
     CombineLatestComponent,
     DebounceTimeComponent,
-    ForkJoinComponent
+    ForkJoinComponent,
+    MenuComponent
   ],
   providers: [],
 })

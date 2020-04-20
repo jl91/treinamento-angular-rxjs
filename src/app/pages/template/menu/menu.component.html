@@ -1,0 +1,32 @@
+<div class="menu-container">
+  <mat-tree [dataSource]="dataSource"
+    [treeControl]="treeControl"
+  >
+    <mat-tree-node *matTreeNodeDef="let node"
+      matTreeNodePadding
+    >
+      <a [routerLink]="node.menuItem.routerLink"
+        mat-menu-item
+        class="menuItem"
+      >
+        {{ node.menuItem.name }}
+      </a>
+
+    </mat-tree-node>
+
+    <mat-tree-node *matTreeNodeDef="let node; when: hasChild.bind(this)"
+      matTreeNodePadding
+    >
+      <button [attr.aria-label]="'toggle ' + node.menuItem.name"
+        mat-icon-button
+        matTreeNodeToggle
+      >
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+
+      </button>
+      {{node.menuItem.name}}
+    </mat-tree-node>
+  </mat-tree>
+</div>

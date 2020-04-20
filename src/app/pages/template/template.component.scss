@@ -1,0 +1,19 @@
+.pages-container {
+  height: 92vh !important;
+
+  .menu {
+    height: 100%;
+    width: 250px;
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .principal-card {
+      width: 95%;
+      margin: 25px 0;
+    }
+  }
+}

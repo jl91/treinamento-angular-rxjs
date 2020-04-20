@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/template/template.module')
-      .then((m) => m.TemplateModule)
+      .then(m => m.TemplateModule)
   },
 ];
 
