@@ -1,10 +1,29 @@
 .menu-container {
   width: 100%;
+
+  .mat-tree-node {
+    min-height: auto;
+  }
+
   .menuItem {
     width: 100%;
     font-size: 14px;
     text-decoration: none;
     padding: 5px 0;
+
+    &:hover {
+      font-weight: bolder;
+    }
+
+    &.active {
+      border: none;
+      outline: none;
+      background: #c2c3c4;
+      font-weight: bolder;
+      color: black;
+    }
   }
+
+
 }
 
