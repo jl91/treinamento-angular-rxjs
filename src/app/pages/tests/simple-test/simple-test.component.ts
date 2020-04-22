@@ -37,7 +37,7 @@ export class SimpleTestComponent implements OnInit, AfterViewInit, AfterViewChec
   public showText(event: MouseEvent) {
     event.preventDefault();
     this.text = 'my text';
-    this.detectChanges();
+    // this.detectChanges();
   }
 
   public ngAfterViewChecked(): void {

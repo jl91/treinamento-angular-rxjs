@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve --aot  --poll=1000",
     "build": "ng build",
-    "test": "ng test --codeCoverage=true --browsers ChromeHeadless",
+    "test": "ng test --codeCoverage=true --browsers",
+    "test-with-report": "ng test --codeCoverage=true  --codeCoverage=true --browsers",
+    "test-console": "ng test --browsers ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
