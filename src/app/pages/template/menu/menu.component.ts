@@ -46,7 +46,16 @@ export class MenuComponent implements OnInit {
           name: 'Debounce time',
           routerLink: ['/operators', 'debounce-time']
         },
-      ]
+      ],
+    },
+    {
+      name: 'Tests',
+      children: [
+        {
+          name: 'Simple test',
+          routerLink: ['/tests', 'simple-test']
+        },
+      ],
     },
   ];
 

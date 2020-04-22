@@ -10,6 +10,7 @@ import {RouterModule} from "@angular/router";
 import {TemplateComponent} from "./template.component";
 import {FormsModule} from "@angular/forms";
 import {MenuComponent} from "./menu/menu.component";
+import {SimpleTestComponent} from "../tests/simple-test/simple-test.component";
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {MenuComponent} from "./menu/menu.component";
     CombineLatestComponent,
     DebounceTimeComponent,
     ForkJoinComponent,
-    MenuComponent
+    MenuComponent,
+    SimpleTestComponent
   ],
   providers: [],
 })

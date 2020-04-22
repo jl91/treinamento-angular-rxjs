@@ -5,6 +5,7 @@ import {HomeComponent} from "../home/home.component";
 import {ForkJoinComponent} from "../operators/fork-join/fork-join.component";
 import {CombineLatestComponent} from "../operators/combine latest/combine-latest.component";
 import {DebounceTimeComponent} from "../operators/debounce-time/debounce-time.component";
+import {SimpleTestComponent} from "../tests/simple-test/simple-test.component";
 
 const routes: Routes = [
   {
@@ -37,6 +38,15 @@ const routes: Routes = [
           },
         ]
       },
+      {
+        path: 'tests',
+        children: [
+          {
+            path: 'simple-test',
+            component: SimpleTestComponent
+          }
+        ]
+      }
     ]
   },
 
