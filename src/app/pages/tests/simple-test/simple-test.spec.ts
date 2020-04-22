@@ -29,7 +29,7 @@ describe('SimpleTest', () => {
 
     const button = fixture.debugElement.nativeElement.querySelector('button');
 
-    const div = fixture.debugElement.nativeElement.querySelector('');
+    const div = fixture.debugElement.nativeElement.querySelector('.custom-text');
 
     button.click();
 
@@ -37,13 +37,8 @@ describe('SimpleTest', () => {
       .then(() => {
         expect(component.showText).toHaveBeenCalled();
         expect(component.text).toEqual('my text');
+        expect(div.textContent).toEqual('my text');
       });
-
-    const divText = element(by.css('.custom-text')).getText() as Promise<string>
-
-    divText.then((text) => {
-      expect(text).toEqual('my text');
-    })
   });
 
 });
