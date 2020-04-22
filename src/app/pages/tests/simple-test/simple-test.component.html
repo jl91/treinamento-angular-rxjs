@@ -1,1 +1,11 @@
-simple-test.component.html
+<button (click)="showText($event)"
+        mat-raised-button
+>
+  Mostrar testo
+</button>
+
+<mat-divider></mat-divider>
+
+<div>
+  {{ text }}
+</div>
