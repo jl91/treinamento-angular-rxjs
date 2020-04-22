@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {SimpleTestComponent} from "./simple-test.component";
-
+import {by, element} from "protractor";
 
 describe('SimpleTest', () => {
 
@@ -28,6 +28,9 @@ describe('SimpleTest', () => {
     spyOn(component, 'showText');
 
     const button = fixture.debugElement.nativeElement.querySelector('button');
+
+    const div = fixture.debugElement.nativeElement.querySelector('');
+
     button.click();
 
     fixture.whenStable()
@@ -35,6 +38,12 @@ describe('SimpleTest', () => {
         expect(component.showText).toHaveBeenCalled();
         expect(component.text).toEqual('my text');
       });
+
+    const divText = element(by.css('.custom-text')).getText() as Promise<string>
+
+    divText.then((text) => {
+      expect(text).toEqual('my text');
+    })
   });
 
 });

@@ -3,14 +3,14 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component,
+  Component, Input,
   OnInit
 } from '@angular/core';
 
 @Component({
   selector: 'app-simple-test',
   templateUrl: 'simple-test.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SimpleTestComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
@@ -25,10 +25,10 @@ export class SimpleTestComponent implements OnInit, AfterViewInit, AfterViewChec
   }
 
   ngAfterViewInit(): void {
-    // this.detectChanges();
+    this.updateView();
   }
 
-  private detectChanges(): void {
+  private updateView(): void {
     this.changeDetectionRef.reattach();
     this.changeDetectionRef.detectChanges();
     this.changeDetectionRef.detach();
@@ -37,7 +37,7 @@ export class SimpleTestComponent implements OnInit, AfterViewInit, AfterViewChec
   public showText(event: MouseEvent) {
     event.preventDefault();
     this.text = 'my text';
-    // this.detectChanges();
+    this.updateView();
   }
 
   public ngAfterViewChecked(): void {
